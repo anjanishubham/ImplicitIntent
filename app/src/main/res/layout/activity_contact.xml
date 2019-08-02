@@ -1,0 +1,71 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="myHandler"
+            type="com.lovelycoding.intent.handler.MyHandler" />
+        <variable
+            name="inputData"
+            type="com.lovelycoding.intent.data.InputData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".websearch.WebSearch">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/contact_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter you phone Number :-"
+            android:inputType="number"
+            android:text="@={inputData.input}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:onClick="@{()->myHandler.viewContact()}"
+            android:text="View Contact"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@+id/call"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tiet" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/call"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:onClick="@{()->myHandler.editContact()}"
+            android:text="Edit Contact"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dail"
+            app:layout_constraintTop_toBottomOf="@+id/tiet" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

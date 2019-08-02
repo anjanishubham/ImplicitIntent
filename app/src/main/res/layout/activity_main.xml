@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+            <variable
+                name="mySelectorHandler"
+                type="com.lovelycoding.intent.handler.MySelectorHandler" />
+    </data>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:id="@+id/toolbar"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/web_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+
+                android:background="@drawable/button_style"
+                android:text="Web Search"
+                android:onClick="@{()-> mySelectorHandler.webSearch()}"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_style"
+                android:text="Web View"
+                android:onClick="@{()-> mySelectorHandler.webView()}"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/view_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="@{()-> mySelectorHandler.viewContact()}"
+                android:background="@drawable/button_style"
+                android:text="Contact"
+
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/edit_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{()-> mySelectorHandler.editContact()}"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                android:background="@drawable/button_style"
+                android:text="Edit Contact"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="@{()-> mySelectorHandler.phoneCall()}"
+                android:background="@drawable/button_style"
+                android:text="Calling"
+
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                android:onClick="@{()-> mySelectorHandler.dailNumber()}"
+                android:background="@drawable/button_style"
+                android:text="Dail"
+
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sms_sent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style"
+                android:layout_margin="8dp"
+
+                android:text="SMS"
+                android:onClick="@{()-> mySelectorHandler.sendSms()}"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sent_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="@{()-> mySelectorHandler.openPhoto()}"
+                android:background="@drawable/button_style"
+                android:text="Gallery"
+
+                android:textColor="@android:color/white" />
+
+            <!--            not handle click event -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_style"
+                android:text="Sent Email"
+
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_style"
+                android:text="Sent Email"
+
+                android:textColor="@android:color/white" />
+
+
+
+        </LinearLayout>
+
+
+        <!-- <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/tiet"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="16dp"
+             android:text="@={inputData.input}"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <include
+             layout="@layout/button"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="24dp"
+             bind:handler="@{handler}"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/tiet">
+
+
+         </include>-->
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

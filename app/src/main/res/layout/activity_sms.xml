@@ -1,0 +1,87 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myHandler"
+            type="com.lovelycoding.intent.handler.MyHandler" />
+
+        <variable
+            name="smsData"
+            type="com.lovelycoding.intent.data.SmsData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".websearch.WebSearch">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/sms_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter you phone Number :-"
+            android:inputType="number"
+            android:maxLength="10"
+            android:text="@={smsData.phoneNumber}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sms_toolbar"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_sms_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter your sms text:-"
+            android:inputType="text"
+            android:text="@={smsData.smsText}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tie_phoneNumber" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:onClick="@{()->myHandler.viewSMS()}"
+            android:text="View SMS"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@+id/call"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tie_sms_string" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/call"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:onClick="@{()->myHandler.sentSMS()}"
+            android:text="Send SMS"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dail"
+            app:layout_constraintTop_toBottomOf="@+id/tie_sms_string" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"></androidx.constraintlayout.widget.ConstraintLayout>
+   <!-- <data>
+        <variable
+            name="handler" type="com.lovelycoding.intent.websearch.handler.MyHandler" />
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acibt_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_search_black_24dp"
+        android:text="Search"
+
+        android:onClick="@{()->handler.onClickWebViewSearch()}"
+        app:layout_constraintEnd_toStartOf="@+id/acibt_dial_number"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acibt_dial_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:drawableStart="@drawable/ic_call_black_24dp"
+        android:text="call"
+        app:layout_constraintEnd_toStartOf="@+id/acibt_message"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintStart_toEndOf="@+id/acibt_search"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acibt_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_message_black_24dp"
+        android:text="message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/acibt_dial_number"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    &lt;!&ndash;    2nd row start&ndash;&gt;
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acibt_view_all_contact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Contact"
+        app:layout_constraintEnd_toStartOf="@+id/acibt_edit_contact"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acibt_search" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acibt_edit_contact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="edit Contact"
+        app:layout_constraintEnd_toStartOf="@+id/acibt_delete_contact"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/acibt_view_all_contact"
+        app:layout_constraintTop_toBottomOf="@+id/acibt_dial_number" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acibt_delete_contact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="delContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/acibt_edit_contact"
+        app:layout_constraintTop_toBottomOf="@+id/acibt_message" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>-->
+</layout>
