@@ -1,4 +1,4 @@
-package com.lovelycoding.intent;
+package com.lovelycoding.intent.sms;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.lovelycoding.intent.MainActivity;
+import com.lovelycoding.intent.R;
 import com.lovelycoding.intent.data.SmsData;
 import com.lovelycoding.intent.databinding.ActivitySmsBinding;
 import com.lovelycoding.intent.handler.MyHandler;

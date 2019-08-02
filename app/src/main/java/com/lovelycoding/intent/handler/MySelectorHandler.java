@@ -1,25 +1,19 @@
 package com.lovelycoding.intent.handler;
 
-import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
-import androidx.core.app.ActivityCompat;
 
-import com.lovelycoding.intent.SMS;
+import com.lovelycoding.intent.ImageActivity;
+import com.lovelycoding.intent.sms.SMS;
 import com.lovelycoding.intent.contact.Contact;
 import com.lovelycoding.intent.MainActivity;
 import com.lovelycoding.intent.permission.Permission;
 import com.lovelycoding.intent.phone.Calling;
 import com.lovelycoding.intent.websearch.WebSearch;
-
-import static android.Manifest.*;
 
 public class MySelectorHandler {
     Context context;
@@ -93,7 +87,9 @@ public class MySelectorHandler {
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void openPhoto()
     {
-        if(!Permission.isGALLERY_PERMISSION_GRANTED)
+
+        context.startActivity(new Intent(context, ImageActivity.class));
+       /* if(!Permission.isGALLERY_PERMISSION_GRANTED)
         {
            Permission.getPhotoPermission(context);
 
@@ -102,7 +98,7 @@ public class MySelectorHandler {
         intent.setAction(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE,true);
-        context.startActivity(intent);
+        context.startActivity(intent);*/
 
     }
 }

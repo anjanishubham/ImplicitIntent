@@ -23,17 +23,18 @@ public class Permission {
     @RequiresApi(api = Build.VERSION_CODES.M)
     public static void getPhotoPermission(Context context)
     {
-        if(context.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED)
+        if(context.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED)
         {
             isGALLERY_PERMISSION_GRANTED=true;
         }
         else {
-            if (ActivityCompat.shouldShowRequestPermissionRationale((Activity)context, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                ActivityCompat.requestPermissions((Activity)context,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},MY_PHOTO_TAGGING_PERMISSIONS);
+            if (ActivityCompat.shouldShowRequestPermissionRationale((Activity)context, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                ActivityCompat.requestPermissions((Activity)context,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},MY_PHOTO_TAGGING_PERMISSIONS);
 
 
-            } else {
-                ActivityCompat.requestPermissions((Activity)context,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},MY_PHOTO_TAGGING_PERMISSIONS);
+            } else
+                {
+                    ActivityCompat.requestPermissions((Activity)context,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},MY_PHOTO_TAGGING_PERMISSIONS);
             }
         }
     }
